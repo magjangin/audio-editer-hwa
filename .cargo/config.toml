@@ -1,0 +1,3 @@
+# MSVC C 런타임을 정적 링크 → VC++ 재배포 패키지 없이 단독 exe 실행
+[target.x86_64-pc-windows-msvc]
+rustflags = ["-C", "target-feature=+crt-static"]

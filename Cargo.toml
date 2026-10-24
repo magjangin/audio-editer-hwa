@@ -12,3 +12,11 @@ symphonia = { version = "0.5", features = ["all"] }
 rfd = "0.15"
 anyhow = "1.0"
 crossbeam-channel = "0.5"
+
+# 단독 배포용 exe: 크기 최소화 + 최적화
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+strip = true
+panic = "abort"
